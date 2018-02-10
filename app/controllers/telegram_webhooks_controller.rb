@@ -1,4 +1,4 @@
-class WebhooksController < ApplicationController
+class TelegramWebhooksController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def callback
