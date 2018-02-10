@@ -1,4 +1,5 @@
 module BotCommand
+  
   class AccomplishTutorial < Base
     def should_start?
       text =~ /\A\/accomplish_tutorial/
