@@ -15,7 +15,7 @@ class TelegramWebhooksController < ApplicationController
   end
 
   def from
-    webhook[:message][:from]
+    params[:message][:from]
   end
 
   def user
