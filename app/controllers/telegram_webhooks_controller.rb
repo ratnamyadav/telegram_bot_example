@@ -2,12 +2,8 @@ class TelegramWebhooksController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def callback
-    dispatcher.new(webhook, user).process
+    dispatcher.new(params, user).process
     render nothing: true, head: :ok
-  end
-
-  def webhook
-    params['webhook']
   end
 
   def dispatcher
